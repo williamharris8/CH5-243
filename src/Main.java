@@ -13,5 +13,18 @@ public class Main {
         catalog.remove(new Artifact("A101", "", ""));
         System.out.println("Size after removing A101: " + catalog.size());
         catalog.print();
+
+        System.out.println("\nPhase 2");
+        LinkedCollection<Artifact> ledger = new LinkedCollection<Artifact>();
+        ledger.add(new Artifact("D404", "Viking Sword", "Medieval"));
+        ledger.add(new Artifact("E505", "Ming Vase", "Ming Dynasty"));
+        ledger.add(new Artifact("F606", "Bronze Mirror", "Bronze Age"));
+
+        Artifact key2 = new Artifact("E505", "", "");
+        System.out.println("Contains E505? " + ledger.contains(key2));
+
+        ledger.remove(key2);
+        System.out.println("Size after removing E505: " + ledger.size());
+        ledger.print();
     }
 }
