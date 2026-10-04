@@ -2,3 +2,4 @@ PHASE 1 - Having to override equals so two artifacts with the same ID count as e
 
 PHASE 2 - A linkedcollection uses more memory per item because each node stores an extra link. Array items sit beside each other in memory allowing searching quickly. Linked nodes can be spread out so searching can be slower.
 
+PHASE 3 - The comparable interface lets objects be sorted by adding a compareto method saying whether one object comes before or after another so they are sorted by ID. Equals and compareto methods should agree and return zero only when equals says the two objects are the same. If not java sorting tools can get confused and miss a match.

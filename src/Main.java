@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Phase 1");
@@ -26,5 +29,21 @@ public class Main {
         ledger.remove(key2);
         System.out.println("Size after removing E505: " + ledger.size());
         ledger.print();
+
+        System.out.println("\nPhase 3");
+        ArrayList<Artifact> museumList = new ArrayList<Artifact>();
+        museumList.add(new Artifact("M04", "Jade Mask", "Mayan"));
+        museumList.add(new Artifact("A01", "Scarab", "Egyptian"));
+        museumList.add(new Artifact("Z99", "Clock", "Modern"));
+        museumList.add(new Artifact("B12", "Amphora", "Greek"));
+
+        System.out.println("Before sorting:");
+        for (Artifact a : museumList) System.out.println(a);
+
+        Collections.sort(museumList);
+
+        System.out.println("After sorting:");
+        for (Artifact a : museumList) System.out.println(a);
+
     }
 }
